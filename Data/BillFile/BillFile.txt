@@ -1,0 +1,8 @@
+[Created at: 2022-12-15]  [Bill code: 1671031987423]
+1. Gun                 PISTOL              Astra600            10000         5
+====================END BILL====================
+
+[Created at: 2022-12-14]  [Bill code: 1671032012210]
+1. Grenade             GRENADE             F1                  10000         5
+====================END BILL====================
+

@@ -3,5 +3,5 @@ G		Gun		SMG
 G		Gun		SHOTGUN
 G		Gun		RIFE
 G		Gun		SNIPER
-AMR		Amor		AMOR
+AMR		Armor		ARMOR
 GR		Grenade		GRENADE

@@ -43,12 +43,14 @@ public class Product extends ProductType{
         this.productPrice = productPrice;
     }
 
+
+
     public String outputDataType() {
-        return String.format("%s\t\t%s\t\t%s", ProductType.getProductTypeCode(), ProductType.getProductTypeName(), this.getProductCode());
+        return String.format("%s\t\t%s\t\t%s", this.getProductTypeCode(), this.getProductTypeName(), this.getProductCode());
     }
 
     public String outpuProductData(){
-        return String.format("%-20s%-20s%-20s%-10.0f%5d",ProductType.getProductTypeName(),this.getProductCode(), this.getProductName(),this.getProductPrice(),this.getRemaining());
+        return String.format("%-20s%-20s%-20s%-10.0f%5d",this.getProductTypeName(),this.getProductCode(), this.getProductName(),this.getProductPrice(),this.getRemaining());
     }
 
 }

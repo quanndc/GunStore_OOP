@@ -40,4 +40,5 @@ public class ReadProductType{
         return this.productTypeList;
     }
 
+
 }

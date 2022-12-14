@@ -10,7 +10,7 @@ public class ViewProductByPrice {
     
     public static void viewByPrice(float price) throws Exception{
         ReadProductInfo rd = new ReadProductInfo();
-        ArrayList<Product> list2 = rd.readProductsInfo();
+        ArrayList<Product> list2 = rd.readProductsInfo("GunStore\\Data\\ProductFile\\ProductFile.txt");
         System.out.print("Input product price you want to view: ");
         price = Integer.parseInt(sc.nextLine());
         for (int i = 0; i < list2.size(); i++) {

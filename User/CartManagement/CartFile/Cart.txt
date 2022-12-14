@@ -1,2 +1,1 @@
-Gun                 SMG                 Uzi                 10000         1
-Gun                 RIFLE               AK20                50000         1
+Grenade             GRENADE             F1                  10000         5

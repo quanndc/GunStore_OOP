@@ -1,23 +1,23 @@
 package ProductType;
 
 public abstract class ProductType {
-    protected static String productTypeCode;
-    protected static String productTypeName;
+    protected String productTypeCode;
+    protected  String productTypeName;
 
-    public static String getProductTypeCode() {
-        return productTypeCode;
+    public String getProductTypeCode() {
+        return this.productTypeCode;
     }
 
-    public static void setProductTypeCode(String productTypeCode) {
-        ProductType.productTypeCode = productTypeCode;
+    public void setProductTypeCode(String productTypeCode) {
+        this.productTypeCode = productTypeCode;
     }
 
-    public static String getProductTypeName() {
-        return productTypeName;
+    public String getProductTypeName() {
+        return this.productTypeName;
     }
 
-    public static void setProductTypeName(String productTypeName) {
-        ProductType.productTypeName = productTypeName;
+    public void setProductTypeName(String productTypeName) {
+        this.productTypeName = productTypeName;
     }
 
     public abstract String outputDataType();

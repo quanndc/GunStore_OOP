@@ -10,7 +10,7 @@ public class UpdateProduct {
     public static void updateName(String name, int index) throws Exception{
         ViewAllProduct.view();
         ReadProductInfo rd = new ReadProductInfo();
-        ArrayList<Product> list = rd.readProductsInfo();
+        ArrayList<Product> list = rd.readProductsInfo("GunStore\\Data\\ProductFile\\ProductFile.txt");
         System.out.print("Enter index of product you want to update: ");
         index = Integer.parseInt(sc.nextLine());
         System.out.print("Enter new name of product: ");
@@ -37,7 +37,7 @@ public class UpdateProduct {
     public static void updatePrice(float price, int index) throws Exception{
         ViewAllProduct.view();
         ReadProductInfo rd = new ReadProductInfo();
-        ArrayList<Product> list = rd.readProductsInfo();
+        ArrayList<Product> list = rd.readProductsInfo("GunStore\\Data\\ProductFile\\ProductFile.txt");
         System.out.print("Enter index of product you want to update: ");
         index = Integer.parseInt(sc.nextLine());
         System.out.print("Enter new price of product: ");
@@ -54,7 +54,7 @@ public class UpdateProduct {
     public static void updateRemaining(int remaining, int index) throws Exception{
         ViewAllProduct.view();
         ReadProductInfo rd = new ReadProductInfo();
-        ArrayList<Product> list = rd.readProductsInfo();
+        ArrayList<Product> list = rd.readProductsInfo("GunStore\\Data\\ProductFile\\ProductFile.txt");
         System.out.print("Enter index of product you want to update: ");
         index = Integer.parseInt(sc.nextLine());
         System.out.print("Enter new remaining of product: ");

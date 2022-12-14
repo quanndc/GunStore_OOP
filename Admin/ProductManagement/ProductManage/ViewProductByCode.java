@@ -10,7 +10,7 @@ public class ViewProductByCode {
     
     public static void viewByCode(String code) throws Exception{
         ReadProductInfo rd = new ReadProductInfo();
-        ArrayList<Product> list2 = rd.readProductsInfo();
+        ArrayList<Product> list2 = rd.readProductsInfo("GunStore\\Data\\ProductFile\\ProductFile.txt");
         System.out.print("Input product code you want to view: ");
         code = sc.nextLine();
         for (int i = 0; i < list2.size(); i++) {

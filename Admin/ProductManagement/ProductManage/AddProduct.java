@@ -6,7 +6,7 @@ import java.util.*;
 public class AddProduct {
     public static void add(Product product) throws Exception {
         ReadProductInfo rd = new ReadProductInfo();
-        ArrayList<Product> list = rd.readProductsInfo();
+        ArrayList<Product> list = rd.readProductsInfo("GunStore\\Data\\ProductFile\\ProductFile.txt");
         boolean added = true;
         for(int i=0;i<list.size();i++){
             if((list.get(i).getProductCode().equalsIgnoreCase(product.getProductCode()) == true) && (list.get(i).getProductName().equalsIgnoreCase(product.getProductName())) == true){

@@ -2,11 +2,15 @@ package Admin.Menu;
 
 import java.util.*;
 
+import Admin.Billmanagement.Bill;
 import Admin.ProductManagement.ProductManage.AddProduct;
 import Admin.ProductManagement.ProductManage.RemoveProduct;
 import Admin.ProductManagement.ProductManage.UpdateProduct;
 import Admin.ProductManagement.ProductManage.ViewAllProduct;
-import Admin.ProductManagement.ProductManage.ViewProductByCode;
+import Admin.ProductManagement.ProductTypeManage.RemoveProductType;
+import Admin.ProductManagement.ProductTypeManage.UpdateProductType;
+import Admin.ProductManagement.ProductTypeManage.ViewAllProductType;
+import Admin.ProductManagement.ProductTypeManage.WriteProductType;
 import Products.Guns.Pistols.Pistol;
 import Products.Guns.Rifle.*;
 import Products.Guns.Shotgun.Shotgun;
@@ -29,29 +33,74 @@ public class AdminMenu {
         int choice = 0;
         do {
             System.out.println("=====ADMIN MANAGEMENT SYSTEM=====");
-            System.out.println("1. Add new product");
-            System.out.println("2. Remove product");
-            System.out.println("3. Update product");
-            System.out.println("4. View product");
-            System.out.println("5. View all products");
-            System.out.println("6. Exit");
+            System.out.println("1.Add new product type");
+            System.out.println("2.Remove product type");
+            System.out.println("3.Update product type");
+            System.out.println("4.View product type");
+            System.out.println("=============================================");
+            System.out.println("5. Add new product");
+            System.out.println("6. Remove product");
+            System.out.println("7. Update product");
+            System.out.println("8. View all products");
+            System.out.println("9. View all daily bills");
+            System.out.println("10. Exit");
             System.out.print("Enter your choice: ");
 
             choice = Integer.parseInt(sc.nextLine());
             switch (choice) {
                 case 1:
+                    // add new product type
+                    System.out.println("=====ADD NEW PRODUCT TYPE SYSTEM=====");
+                    Product product = new Product();
+                    String productTypeCode = "";
+                    System.out.println("Enter product type code: ");
+                    productTypeCode = sc.nextLine();
+                    product.setProductTypeCode(productTypeCode);
+                    String productTypeName = "";
+                    System.out.println("Enter product type name: ");
+                    productTypeName = sc.nextLine();
+                    product.setProductTypeName(productTypeName);
+                    String productCode = "";
+                    System.out.println("Enter product code: ");
+                    productCode = sc.nextLine();
+                    product.setProductCode(productCode);
+                    WriteProductType wr = new WriteProductType(true);
+                    wr.write(product);
+                    wr.bw.close();
+                    wr.fw.close();
+                    break;
+                case 2:
+                    // remove product type
+                    System.out.println("=====REMOVE PRODUCT TYPE SYSTEM=====");
+                    int index = 0;
+                    RemoveProductType.remove(index);
+                    break;
+                case 3:
+                    // update product Type
+                    System.out.println("=====UPDATE PRODUCT TYPE SYSTEM=====");
+                    int index2 = 0;
+                    String name = "";
+                    UpdateProductType.update(index2, name);
+                    break;
+                case 4:
+                    // view all product type
+                    System.out.println("=====VIEW ALL PRODUCT TYPE SYSTEM=====");
+                    ViewAllProductType.view();
+                    break;
+                case 5:
                     // add new product
                     int choice2 = 0;
+                    System.out.println("=====ADD NEW PRODUCT SYSTEM=====");
                     do {
                         System.out.println("=====ADD NEW PRODUCT SYSTEM=====");
                         System.out.println("1. Add new rifle");
                         System.out.println("2. Add new pistol");
                         System.out.println("3. Add new shotgun");
-                        System.out.println("4. Add new amor");
+                        System.out.println("4. Add new armor");
                         System.out.println("5. Add new grenade");
                         System.out.println("6. Add new sniper");
                         System.out.println("7. Add new submachine");
-                        System.out.println("8.Exit");
+                        System.out.println("8.Back");
                         System.out.print("Enter your choice: ");
                         choice2 = Integer.parseInt(sc.nextLine());
                         switch (choice2) {
@@ -143,13 +192,13 @@ public class AdminMenu {
                         }
                     } while (choice2 != 8);
                     break;
-                case 2:
+                case 6:
                     // remove product
-                    int index = 0;
-                    RemoveProduct.remove(index);
+                    int index1 = 0;
+                    RemoveProduct.remove(index1);
                     clearScreen();
                     break;
-                case 3:
+                case 7:
                     // grenerate update menu
                     int updateChoice = 0;
                     do {
@@ -163,22 +212,22 @@ public class AdminMenu {
                         switch (updateChoice) {
                             case 1:
                                 // update product name
-                                int index2 = 0;
+                                int index3 = 0;
                                 String newName = "";
-                                UpdateProduct.updateName(newName, index2);
+                                UpdateProduct.updateName(newName, index3);
                                 break;
                             case 2:
                                 // update product price
-                                int index3 = 0;
+                                int index4 = 0;
                                 float price = 0;
-                                UpdateProduct.updatePrice(price, index3);
+                                UpdateProduct.updatePrice(price, index4);
                                 clearScreen();
                                 break;
                             case 3:
                                 // update product remaining
-                                int index4 = 0;
+                                int index5 = 0;
                                 int remaining = 0;
-                                UpdateProduct.updateRemaining(remaining, index4);
+                                UpdateProduct.updateRemaining(remaining, index5);
                                 clearScreen();
                                 break;
                             case 4:
@@ -192,22 +241,22 @@ public class AdminMenu {
                         }
                     } while (updateChoice != 4);
                     break;
-                case 4:
-                    // view product by code
-                    String code = "";
-                    ViewProductByCode.viewByCode(code);
-                    break;
-                case 5:
+                case 8:
                     // view all products
                     ViewAllProduct.view();
                     break;
-                case 6:
+                case 9:
+                    // print daily bills
+                    Bill.printDailyBill();
+                    break;
+                case 10:
                     // exit
                     System.out.println("Exiting...");
                     break;
                 default:
                     System.out.println("Invalid choice");
+                    break;
             }
-        } while (choice != 6);
+        } while (choice != 9);
     }
 }

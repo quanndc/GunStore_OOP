@@ -13,9 +13,9 @@ public class ReadProductInfo {
 
     private ArrayList<Product> productTypeList = new ArrayList<>();
 
-    public ArrayList<Product> readProductsInfo() throws Exception{
+    public ArrayList<Product> readProductsInfo(String path) throws Exception{
         try{
-            File file = new File("GunStore\\Data\\ProductFile\\ProductFile.txt");
+            File file = new File(path);
             FileReader fr = new FileReader(file);
             BufferedReader br = new BufferedReader(fr);
             String line = null;

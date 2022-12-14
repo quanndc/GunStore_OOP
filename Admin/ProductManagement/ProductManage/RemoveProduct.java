@@ -12,7 +12,7 @@ public class RemoveProduct {
         System.out.print("Enter index of product you want to remove: ");
         index = sc.nextInt();
         ReadProductInfo rd = new ReadProductInfo();
-        ArrayList<Product> list = rd.readProductsInfo();
+        ArrayList<Product> list = rd.readProductsInfo("GunStore\\Data\\ProductFile\\ProductFile.txt");
         list.remove(index - 1);
         WriteProductInfo wr = new WriteProductInfo(false,"GunStore\\Data\\ProductFile\\ProductFile.txt");
         for (int i = 0; i < list.size(); i++) {
