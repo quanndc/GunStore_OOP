@@ -1,0 +1,7 @@
+G		Gun		PISTOL
+G		Gun		SMG
+G		Gun		SHOTGUN
+G		Gun		RIFE
+G		Gun		SNIPER
+AMR		Amor		AMOR
+GR		Grenade		GRENADE
