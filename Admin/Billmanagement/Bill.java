@@ -57,17 +57,26 @@ public class Bill {
             File file = new File("GunStore\\Data\\BillFile\\BillFile.txt");
             FileReader fr = new FileReader(file);
             BufferedReader br = new BufferedReader(fr);
+            boolean check = false;
             String line = null;
             while((line = br.readLine()) != null){
                 if(line.contains("Created at: " + LocalDate.now())){
+                    check = true;
                     System.out.println(line);
                     while((line = br.readLine()) != null){
                         if(line.contains("Total: ")){
+                            System.out.println(line);
                             break;
                         }
                         System.out.println(line);
                     }
+                    return;
+                }else{
+                    check = false;
                 }
+            }
+            if(check == false){
+                System.out.println("NOTHING TO PRINT!!!");
             }
             br.close();
             fr.close();

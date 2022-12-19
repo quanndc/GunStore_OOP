@@ -2,8 +2,6 @@ package User.CartManagement;
 
 
 import java.util.ArrayList;
-import java.util.Date;
-import java.time.LocalDate; 
 import java.util.Scanner;
 
 import Admin.ProductManagement.ProductManage.WriteProductInfo;
@@ -67,6 +65,11 @@ public class Cart {
     }
 
     public static void removeProductFromCart(int index) {
+        for (int i = 0; i < Cart.cart.size(); i++) {
+            System.out.println((i + 1) + ". " + Cart.cart.get(i).outpuProductData());
+        }
+        System.out.println("Enter product index you want to remove: ");
+        index = Integer.parseInt(sc.nextLine());
         if (Cart.cart.size() == 0) {
             System.out.println("NOTHING TO REMOVE!!!");
             return;
@@ -74,11 +77,8 @@ public class Cart {
             System.out.println("Invalid index!");
             return;
         }
-        for (int i = 0; i < Cart.cart.size(); i++) {
-            System.out.println((i + 1) + ". " + Cart.cart.get(i).outpuProductData());
-        }
-        System.out.println("Enter product index you want to remove: ");
-        index = Integer.parseInt(sc.nextLine());
+       
+        
         cart.remove(index - 1);
         System.out.println("Remove product from cart successfully!");
     }
@@ -165,9 +165,7 @@ public class Cart {
             return;
         }
         System.out.println("====YOUR BILL====");
-        
-        LocalDate createdAt = LocalDate.now();
-        long billCode = new Date().getTime();
+
         for (int i = 0; i < list.size(); i++) {
             System.out.println((i + 1) + ". " + list.get(i).outpuProductData());
         }

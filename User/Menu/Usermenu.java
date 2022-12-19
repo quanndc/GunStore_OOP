@@ -98,6 +98,7 @@ public class Usermenu {
                     }
                     System.out.println("1. Purchase all products in your cart");
                     System.out.println("2. Purchase a product in your cart");
+                    System.out.println("3. Exit");
                     int choice3 = 0;
                     System.out.print("Enter your choice: ");
                     choice3 = Integer.parseInt(sc.nextLine());

@@ -15,4 +15,4 @@ Grenade             GRENADE             M67                 10000        20
 Grenade             GRENADE             F1                  10000        10
 Armor               AMOR                TALOS               300000        5
 Armor               AMOR                PASGT               200000        5
-Armor               AMOR                DragonSilk          500000        5
+Armor               AMOR                DragonSilk          500000        4

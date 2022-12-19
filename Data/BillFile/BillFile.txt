@@ -6,3 +6,8 @@
 1. Grenade             GRENADE             F1                  10000         5
 ====================END BILL====================
 
+[Created at: 2022-12-18]  [Bill code: 1671449004535]
+1. Armor               AMOR                DragonSilk          500000        1
+Total: 500000.0
+====================END BILL====================
+

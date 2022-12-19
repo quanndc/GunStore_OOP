@@ -1,1 +1,1 @@
-Grenade             GRENADE             F1                  10000         5
+Armor               AMOR                DragonSilk          500000        1
