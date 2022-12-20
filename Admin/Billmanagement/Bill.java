@@ -70,7 +70,6 @@ public class Bill {
                         }
                         System.out.println(line);
                     }
-                    return;
                 }else{
                     check = false;
                 }
